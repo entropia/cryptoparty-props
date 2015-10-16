@@ -1,41 +1,26 @@
 #!/bin/bash
 
-mkdir -p out
-rm -f _pubkey_padlock_andi.pdf _pubkey_padlock_christian.pdf _pubkey_padlock_blank.pdf \
-      _pubkey_signature_andi.pdf _pubkey_signature_christian.pdf _pubkey_signature_blank.pdf
-rm -f out/*
+set -u -e
 
-# pubkey
-inkscape <(sed 's/LENAME/Andi/g' pubkey_padlock.svg) --export-pdf=_pubkey_padlock_andi.pdf
-inkscape <(sed 's/LENAME/Christian/g' pubkey_padlock.svg) --export-pdf=_pubkey_padlock_christian.pdf
-inkscape <(sed 's/LENAME/Florolf/g' pubkey_padlock.svg) --export-pdf=_pubkey_padlock_florolf.pdf
-inkscape <(sed 's/LENAME/____________/g' pubkey_padlock.svg) --export-pdf=_pubkey_padlock_blank.pdf
-inkscape <(sed 's/LENAME/Andi/g' pubkey_signature.svg) --export-pdf=_pubkey_signature_andi.pdf
-inkscape <(sed 's/LENAME/Christian/g' pubkey_signature.svg) --export-pdf=_pubkey_signature_christian.pdf
-inkscape <(sed 's/LENAME/Florolf/g' pubkey_signature.svg) --export-pdf=_pubkey_signature_florolf.pdf
-inkscape <(sed 's/LENAME/____________/g' pubkey_signature.svg) --export-pdf=_pubkey_signature_blank.pdf
-pdfjam _pubkey_padlock_andi.pdf _pubkey_signature_andi.pdf --outfile out/pubkey_andi.pdf
-pdfjam _pubkey_padlock_florolf.pdf _pubkey_signature_florolf.pdf --outfile out/pubkey_florolf.pdf
-pdfjam _pubkey_padlock_christian.pdf _pubkey_signature_christian.pdf --outfile out/pubkey_christian.pdf
-pdfjam _pubkey_padlock_blank.pdf _pubkey_signature_blank.pdf --outfile out/pubkey_blank.pdf
+# http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
+cd "$( dirname "${BASH_SOURCE[0]}" )"
 
-# privkey
-inkscape <(sed 's/LENAME/Andi/g' privkey_key.svg) --export-pdf=_privkey_key_andi.pdf
-inkscape <(sed 's/LENAME/Christian/g' privkey_key.svg) --export-pdf=_privkey_key_christian.pdf
-inkscape <(sed 's/LENAME/Florolf/g' privkey_key.svg) --export-pdf=_privkey_key_florolf.pdf
-inkscape <(sed 's/LENAME/___________/g' privkey_key.svg) --export-pdf=_privkey_key_blank.pdf
-inkscape <(sed 's/LENAME/Andi/g' privkey_pen.svg) --export-pdf=_privkey_pen_andi.pdf
-inkscape <(sed 's/LENAME/Christian/g' privkey_pen.svg) --export-pdf=_privkey_pen_christian.pdf
-inkscape <(sed 's/LENAME/Florolf/g' privkey_pen.svg) --export-pdf=_privkey_pen_florolf.pdf
-inkscape <(sed 's/LENAME/___________/g' privkey_pen.svg) --export-pdf=_privkey_pen_blank.pdf
-pdfjam _privkey_key_andi.pdf _privkey_pen_andi.pdf --outfile out/privkey_andi.pdf
-pdfjam _privkey_key_christian.pdf _privkey_pen_christian.pdf --outfile out/privkey_christian.pdf
-pdfjam _privkey_key_florolf.pdf _privkey_pen_florolf.pdf --outfile out/privkey_florolf.pdf
-pdfjam _privkey_key_blank.pdf _privkey_pen_blank.pdf --outfile out/privkey_blank.pdf
+rm -rf ./out ./tmp
+mkdir -p ./out ./tmp
 
-# signme
-inkscape <(sed -e 's/LENAME/Andi/g' -e "s/LEKEYID/$(echo Andi | sha1sum | cut -c 1-16)/g" pubkey_signme.svg) --export-pdf=out/pubkey_signme_andi.pdf
-inkscape <(sed -e 's/LENAME/Christian/g' -e "s/LEKEYID/$(echo Christian | sha1sum | cut -c 1-16)/g" pubkey_signme.svg) --export-pdf=out/pubkey_signme_christian.pdf
-inkscape <(sed -e 's/LENAME/Florolf/g' -e "s/LEKEYID/$(echo Florolf | sha1sum | cut -c 1-16)/g" pubkey_signme.svg) --export-pdf=out/pubkey_signme_florolf.pdf
-inkscape <(sed -e 's/LENAME/____________/g' -e "s/LEKEYID/$(echo ____________ | sha1sum | cut -c 1-16)/g" pubkey_signme.svg) --export-pdf=out/pubkey_signme_blank.pdf
+PEOPLE="Andi Christian florolf ____________"
+
+for NAME in $PEOPLE; do
+    for filename in pubkey_padlock pubkey_signature privkey_key privkey_pen pubkey_signme; do
+        KEYID=$(echo $NAME | sha1sum | cut -c 1-16)
+        inkscape <(sed -e "s/LENAME/${NAME}/g" -e "s/LEKEYID/${KEYID}/g" templates/${filename}.svg) --export-pdf=tmp/${filename}_${NAME}.pdf
+    done
+    for patt in pubkey_padlock:pubkey_signature:pubkey privkey_key:privkey_pen:privkey; do
+        front=$(echo $patt | cut -d: -f1)
+        back=$(echo $patt | cut -d: -f2)
+        result=$(echo $patt | cut -d: -f3)
+        pdfjam tmp/${front}_${NAME}.pdf tmp/${back}_${NAME}.pdf --outfile out/${result}_${NAME}.pdf
+    done
+    mv tmp/pubkey_signme_${NAME}.pdf out
+done
 

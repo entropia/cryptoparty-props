@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="21cm"
+   height="29.700001cm"
+   viewBox="0 0 744.09449 1052.3622"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="privkey_key.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="54.63838"
+     inkscape:cy="611.10348"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer6"
+     showgrid="true"
+     units="cm"
+     objecttolerance="10000"
+     inkscape:window-width="1680"
+     inkscape:window-height="1005"
+     inkscape:window-x="1680"
+     inkscape:window-y="45"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4138" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Privkey"
+     style="display:inline">
+    <g
+       inkscape:groupmode="layer"
+       id="layer6"
+       inkscape:label="Key"
+       style="display:inline">
+      <path
+         id="path4582"
+         d="m 493.05621,364.57684 c -88.90964,-2e-5 -160.968,72.05832 -160.96805,160.96805 5e-5,12.32407 1.38333,24.27096 4.0242,35.77767 l -246.04212,245.97919 0,40.24201 40.24201,40.242 80.48402,0 40.24201,-40.24201 1e-5,-40.242 40.24193,6e-5 8e-5,-40.24207 40.24201,-1e-5 10e-6,-40.24201 80.48401,0 44.51768,-44.51768 c 11.75824,2.70374 23.95657,4.14995 36.53219,4.14995 88.90965,3e-5 160.96801,-72.05832 160.96805,-160.96805 -2e-5,-88.90964 -72.12123,-160.90513 -160.9677,-160.90547 z m -161.53387,281.75688 -201.21008,201.21005 0,-40.24202 201.21001,-201.20997 7e-5,40.24194 z M 532.73232,525.60774 c -22.19596,-2e-5 -40.24199,-18.04605 -40.242,-40.242 -3e-5,-22.19597 18.04597,-40.24197 40.24201,-40.24201 22.19595,10e-6 40.24198,18.04604 40.242,40.242 -5e-5,22.19603 -18.04605,40.24204 -40.24201,40.24201 z"
+         inkscape:connector-curvature="0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:68.75px;line-height:125%;font-family:Axel;-inkscape-font-specification:'Axel, Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="370.32849"
+       y="78.118881"
+       id="text4209-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="376.18787"
+         y="78.118881"
+         id="tspan4213-8"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:60px;line-height:125%;font-family:Axel;-inkscape-font-specification:'Axel, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle">Geheimer Schlüssel von </tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="Christian"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:60px;line-height:125%;font-family:Axel;-inkscape-font-specification:'Axel, Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="372.5802"
+       y="167.04807"
+       id="text4209-7-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4505-2-4"
+         x="372.5802"
+         y="167.04807">LENAME</tspan></text>
+  </g>
+</svg>

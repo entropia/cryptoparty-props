@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="21cm"
+   height="29.700001cm"
+   viewBox="0 0 744.09449 1052.3622"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="privkey_pen.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="407.63838"
+     inkscape:cy="611.10348"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer4"
+     showgrid="true"
+     units="cm"
+     objecttolerance="10000"
+     inkscape:window-width="1680"
+     inkscape:window-height="1005"
+     inkscape:window-x="0"
+     inkscape:window-y="45"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4138" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Privkey"
+     style="display:inline">
+    <g
+       inkscape:groupmode="layer"
+       id="layer5"
+       inkscape:label="Stift"
+       style="display:inline">
+      <g
+         id="layer1-5"
+         transform="matrix(5.9325122,0,0,5.9325122,-181.68436,64.084632)">
+        <g
+           transform="matrix(0.833158,0,0,0.833158,420.0042,-144.8536)"
+           id="g2668">
+          <path
+             style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:4.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="path2656"
+             d="m -354,232.36218 -89,89 -6.08494,22.70929 21.59984,-5.78765 89.70337,-89.70337 c 0,0 8.30639,-7.96792 0,-16.21827 -7.80534,-7.75268 -15.83268,-0.36757 -16.21827,0 z"
+             inkscape:connector-curvature="0" />
+          <path
+             style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:2.29792929;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="path2658"
+             d="m -424.5334,334.23756 c 0,0 -4.68607,1.97503 -6.82719,-0.24103 -2.14112,-2.21608 -1.08772,-6.71004 -1.08772,-6.71004 0,0 -3.79681,1.96474 -5.34508,-0.25821 -1.54827,-2.22295 -2.17891,-3.49614 -1.3558,-5.74656 0.82312,-2.25041 0.20192,-3.20359 0.20192,-3.20359"
+             inkscape:connector-curvature="0" />
+          <path
+             style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:6.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="path2662"
+             d="m -447.40541,341.8757 4.6919,-4.02163"
+             inkscape:connector-curvature="0" />
+          <path
+             style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:2.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="path2664"
+             d="m -432.14054,327.46488 c 4.35675,-4.35675 93.83783,-92.49729 93.83783,-92.49729"
+             inkscape:connector-curvature="0" />
+          <path
+             transform="matrix(0.708787,0.144083,0.40256,0.825487,-193.8763,87.7153)"
+             style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             id="path2666"
+             d="m -335.39459,238.29372 a 8.47568,8.8792837 0 1 1 -16.95136,0 8.47568,8.8792837 0 1 1 16.95136,0 z"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:68.75px;line-height:125%;font-family:Axel;-inkscape-font-specification:'Axel, Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="370.32849"
+       y="78.118881"
+       id="text4209-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="376.18787"
+         y="78.118881"
+         id="tspan4213-8"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:60px;line-height:125%;font-family:Axel;-inkscape-font-specification:'Axel, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle">Geheimer Schlüssel von </tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="Christian"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:60px;line-height:125%;font-family:Axel;-inkscape-font-specification:'Axel, Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="372.5802"
+       y="167.04807"
+       id="text4209-7-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4505-2-4"
+         x="372.5802"
+         y="167.04807">LENAME</tspan></text>
+  </g>
+</svg>

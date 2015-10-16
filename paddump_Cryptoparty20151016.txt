@@ -1,0 +1,166 @@
+Termin    2015-10-16 19:00
+
+Themen:
+ * Mails Verschluesseln
+   * Pretty Good Privacy (PGP)
+   * De-Mail, E-Postbrief, ... (vom Anbieter ver-/entschluesselte Emails)
+ * Warum ueberhaupt verschluesseln?
+ * Off-the-Record Messaging (OTR)
+ * Warum offene Standards wichtig sind
+ * Kommerzielle Interessen vs Privatsphaere
+ * Freifunk
+ * ...
+
+Disclaimer
+
+Krypto kostet nerven, Zeit - Es wird komplizierter und anstrengender
+Ist halt wie ein Sicherheitsschuh oder Fahrradhelm - wenn man im Fall der Fälle geschützt sein will, dann muss man eben permanent Stahlkappen/Helm mit sich rumschleppen. 
+
+
+
+Props:
+ * 5 Key-Pairs (1 Priv, 5 Pub)
+   * Private-Key: halb Schlüssel, halb Stift
+   * Public-Key: halb viele Schlösser, halb Referenzunterschrift
+ * Daten - Katzenbilder/Stockphotos
+ * Black-Box "Internet"
+ * Sturmhauben (hat olf wiedergefunden)
+ * Würfel (hat olf auch wiedergefunden)
+
+Rollen:
+ * Heiko moderator
+ * problame: Alice
+ * andi: Bob
+ * florolf: Charlie
+ * Jack als Das Internet
+ * olf als Haxx0r
+
+DISCLAIMER
+ * Viele Verfahren werden vereinfacht erklaert, sind mathematische Funktionen
+ * Internet sind "Leute"
+ * Fragen immer sofort stellen
+ * Wir versuchen alle "mitzunehmen"
+ * evtl. "wer sicher sein will muss auch etwas leiden"
+
+
+Referenten aka Erklärbär vom Dienst:
+ * Heiko
+ * Jack
+ * Morbi
+ * florolf
+ * Olf (ReferENTE)
+ * andi
+ * 
+
+Ausgangsfolie /-handout
+Wichtigste Punkte zusammenfassen
+An Resourcen bedienen
+Resourcen
+ * https://www.cryptoparty.in/connect/resources
+ * https://github.com/cryptoparty/slides/tree/master/intro
+ * https://emailselfdefense.fsf.org/de/
+
+
+Ablauf:
+ * Talking Points vorstellen: Wichtigste Grundlagen, Installation, evtl. sog. Key-Signing-Party
+   * Wollt ihr das ueberhaupt hoeren?
+   * #include<disclaimer>
+ * plain Emailversand im "Happy place"
+   * katzenbild
+ * plain Emailversand mit "Modifikation/Inhalt lesen" der Nachricht
+   * alice schreibt bob: "charlie ist doof!"
+ * FRAGERUNDE
+ * suddenly Keys - Was sind Keys!
+   * andi wuerfelt sich einen schluessel
+   * "In wirklichkeit sieht das so aus" (heiko)
+   * wir zeigen das jetzt etwas anschaulicher
+     * private key: was kann der?
+       * gut aufheben!
+     * public key: was kann der?
+       * das sind daten, die man oft kopieren kann
+       * wir stellen hier das durch einen stapel mit "genug" keys dar
+       * andi verteilt den schluessel *selbst* an viele leute, auch christian
+     * wir spielen jetzt die einzelnen funktionen durch und erklaeren die details on-the-fly
+ * verschluesselter Emailversand, unsigniert
+   * im happy place, alles klappt
+   * "heiko ist doof"
+     * From, To, Subject, etc sind nach wie vor oeffentlich
+     * Pubkey ist wie ein offenes schloss, christian macht das jetzt zu und nur andi kann es aufmachen
+     * keiner kann reingucken \o/
+ * verschluesselter Emailversand, unsigniert
+   * der schluessel ist oeffentlich, jeder andere kann auch verschluesseln
+     * absender kann man auch bei echten briefen faelschen
+     * "heiko ist toll"
+   * andi kann entschluesseln und glaubt, die mail waere von christian :/
+   * kaputt-> signieren
+     * einfach abstrakt sagen: damit schuetzt man sich auch vor manipulation
+ * FRAGERUNDE
+ * Was kann man dagegen tun? Signieren
+ * signierter Mailversand, unverschlüsselt
+   * szenario: ueberweisungsauftrag an die bank
+     * soll klar sein, dass es von christian kommt
+     * soll nicht veraendert werden koennen
+   * wenn olf veraendert faellt es andi auf
+   * andi ueberprueft mit dem oeffentlichen schluessel -> passt
+ * FRAGERUNDE
+ * signierte und verschlüsselte Mail
+   * encrypt then sign
+   * frage ans publikum: "was kann olf tun?"
+   * olf kann nichts tun, andi kann alles pruefen: alles toll
+ * FRAGERUNDE
+ * Heiko stellt sich dem Publikum unter einem Namen vor. Nachfolgend stellen sich weitere Personen unter demselben Namen vor.
+   * Interaktives Erarbeiten des demonstrierten Problems
+ * "DIE LÖSUNG" wird demonstriert am folgenden Szenario
+ * Szenario: Christian kennt Andi gut, Andi kennt Florolf gut, aber Christian kennt Florolf nicht gut
+   * Christian signiert* Andis Key, gibt dem Internet die Signatur**, diese geht zum Keyserver***
+   * Andi signiert Florolfs Key, same as above
+   * olf lädt weitere (unsignierte oder mit Schwasinnssignatur** versehene) Keys für Florolf auf den Keyserver***
+   * * signieren = Identitätscheck, Fingerprintvergleich (sind auf Key-Zettel gedruckt), Signatur** erstellen
+   * ** Signatur = Signaturpaket = Kleine Zettel mit offenem Schloss, die die Unterschrift des Signierenden tragen
+   * *** an Keyserver senden = festtackern der Signatur** an den bestehenden Signaturen auf dem Keyserver. Keyserver = Flipchart
+   * Christian möchte Florolf etwas Wichtiges sagen, hat Florolfs Public-Key aber nicht auf direktem Wege erhalten
+   * Also lädt Christian aus dem Internet vom Keyserver eine Kopie von Florolfs Public-Key-Signaturliste 
+   * Christian sieht Andis Signatur und überprüft deren Authentizität anhand des vorhandenen Public Keys von Andi
+   * Christian schätzt Andi als zuverlässig ein (Andi hat ordentlich signiert*).
+   * Christian nutzt Florolfs Public-Key, um eine verschlüsselte E-Mail an Florolf zu schicken.
+   * Anmerkung; Christians Sicherheit darüber, dass er auch sicher Florolfs Public Key genutzt hat (und keinen anderen), ist durch die am schlampigsten signierende Person in der Kette bis zu Florolf limitiert (hier ist das Andi, kann aber viel länger sein).
+     * Also: Jedes Kettenglied stellt potentielles Risiko dar
+     * Du willst nicht das Kettenglied sein, aufgrund dessen jemandes Privatsphäre verletzt werden kann. Also immer ordentlich & gewissenhaft signieren.
+ * FRAGERUNDE
+ * Installation von Engimail auf Rechnern
+ * Key-Signing Party
+
+Q & A
+ * GPG-kompatible Apps auf Mobilplattformen?
+   * Grundsätzlich: Integrität der Geräte nicht garantiert
+   * Android
+     * K9: OpenKeychain wird aktiv entwickelt
+   * iOS
+     * Nicht in eingebaute Mail-App integrierbar (keine Plugins)
+     * (Fast) Closed-source third party clients.
+     * Unkomfortabel
+   * Others:
+
+
+
+Props
+ * Vorgenerierte Mails
+   * mit soufflage "Welches szenario ist das?" in klein auf der seite
+   * keine umschlaege. papier zusammenfalten, header auf der rueckseite
+ * Pubkey
+   * buegelschloss offen
+   * unterschrift direkt mit rollennamen (und einen satz blanko fuer publikum)
+
+Einkaufsliste
+Buntes Papier (Neonfarben)
+Umschlaege (A4 Versandtaschen)
+
+Mitbringen
+ * Freifunk AP (Jack)
+ * Drucker ()
+ * Schere
+ * Klebeband
+ * Tacker
+
+
+

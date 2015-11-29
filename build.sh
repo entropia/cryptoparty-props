@@ -24,3 +24,16 @@ for NAME in $PEOPLE; do
     mv tmp/pubkey_signme_${NAME}.pdf out
 done
 
+ALICE="Christian"
+BOB="Andi"
+CHEF="Heiko"
+
+cd templates
+
+for MAIL in mail_*.svg; do
+    inkscape <(sed -e "s/LEALICE/${ALICE}/g" -e "s/LEBOB/${BOB}/g" -e "s/LECHEF/${CHEF}/g" ${MAIL}) --export-pdf=../tmp/${MAIL/svg/pdf}
+done
+
+cd ..
+
+pdfjam tmp/mail_*.pdf --outfile out/mails.pdf

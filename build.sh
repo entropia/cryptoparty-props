@@ -8,7 +8,7 @@ cd "$( dirname "${BASH_SOURCE[0]}" )"
 rm -rf ./out ./tmp
 mkdir -p ./out ./tmp
 
-PEOPLE="Andi Christian florolf ____________"
+PEOPLE="Christian olf Morbi ____________"
 
 for NAME in $PEOPLE; do
     for filename in pubkey_padlock pubkey_signature privkey_key privkey_pen pubkey_signme; do
@@ -25,8 +25,8 @@ for NAME in $PEOPLE; do
 done
 
 ALICE="Christian"
-BOB="Andi"
-CHEF="Heiko"
+BOB="olf"
+CHEF="Andi"
 
 cd templates
 
